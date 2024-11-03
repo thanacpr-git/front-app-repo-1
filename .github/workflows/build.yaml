@@ -75,8 +75,7 @@ jobs:
           ref: main
           token: ${{ secrets.GITHUB_TOKEN }}
           path: k8s-manifest-repo
-        run: echo "Using GITHUB_TOKEN with specified permissions"
-        
+          
       - name: Update Kubernetes resources
         run: |
           echo ${{ steps.login-ecr.outputs.registry }}
